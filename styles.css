@@ -1,10 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 
-html{
+html, body{
     font-family: 'Gloock', serif;
-    background: rgb(253, 254, 246);
+    margin: 0;
 }
 
-.container {
+.intro {
+    padding: 30px;
     text-align: center;
+    background: #d8b8b1;
+    color: black;
+    font-size: 30px;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #BE92A2;
   }
+
+.tab button {
+    background-color: #BE92A2;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    }
+
+.tab button:hover {
+    background-color: #ddd;
+    }
+
+.tab button.active {
+    background-color: #523249;
+    color: white;
+    }
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    background: #231B1B;
+    color: white;
+    }

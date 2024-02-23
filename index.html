@@ -7,13 +7,50 @@
 
   <body>
 
-    <div class="container">
-      <h1>My personal web site.</h1>
+    <div class="intro">
+      <h1>The Stories That Make Me</h1>
+      <p>There is nothing I think about more than stories.</p>
+      <p>This is an homage to the media that make me.</p>
+    </div>
+        
 
-      <p>Hello, world.</p>
-      
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Film & TV')">Film & TV</button>
+      <button class="tablinks" onclick="openCity(event, 'Anime')">Anime</button>
+      <button class="tablinks" onclick="openCity(event, 'Games')">Games</button>
+    </div>
 
-   </div>
+    <div id="Film & TV" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Anime" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Games" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
+
 
   </body>
 </html>
