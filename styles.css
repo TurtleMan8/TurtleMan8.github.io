@@ -33,7 +33,6 @@ html, body{
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.1s;
     font-weight: bold;
     }
 
@@ -68,18 +67,42 @@ img {
   
 .story .comment {
     opacity: 0;
-    width: 120px;
+    visibility: hidden;
+    width: 200px;
     background-color: rgb(3, 9, 31);
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px 10px;
     position: absolute;
     z-index: 1;
     transition: .2s ease;
-    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    margin-left: -40px;
+}
+
+.story .rightcolumn {
+    opacity: 0;
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(3, 9, 31);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    transition: .2s ease;
+    margin-top: 30px;
+    margin-left: -490px;
 }
   
 .story:hover .comment {
     opacity: 1;
+    visibility: visible;
+}
+
+.story:hover .rightcolumn {
+    opacity: 1;
+    visibility: visible;
 }
